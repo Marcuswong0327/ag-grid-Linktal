@@ -1,0 +1,154 @@
+:root {
+  --bg: #0f172a;
+  --panel: #ffffff;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --ok: #16a34a;
+  --lock: #b45309;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: var(--ink);
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+.app__header h1 {
+  font-size: 20px;
+  margin: 0 0 2px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search {
+  flex: 1;
+  min-width: 240px;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.toolbar__group {
+  display: flex;
+  gap: 6px;
+}
+
+.toolbar button {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.toolbar button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.toolbar button.locked {
+  border-style: dashed;
+  color: var(--lock);
+  border-color: #f59e0b;
+  background: #fffbeb;
+  opacity: 0.85;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  min-height: 0;
+}
+
+.grid-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.eval {
+  width: 320px;
+  background: var(--panel);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  overflow: auto;
+}
+
+.eval h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.eval__title {
+  font-size: 14px;
+  margin: 16px 0 6px;
+}
+
+.eval__title--ok {
+  color: var(--ok);
+}
+
+.eval__title--lock {
+  color: var(--lock);
+}
+
+.eval__list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.eval__list--lock li {
+  color: #92400e;
+}
+
+/* Grid conditional-formatting classes */
+.cell-danger {
+  background: #fee2e2 !important;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.cell-good {
+  background: #dcfce7 !important;
+  color: #15803d;
+}
+
+.cell-warn {
+  background: #fef9c3 !important;
+  color: #a16207;
+}
