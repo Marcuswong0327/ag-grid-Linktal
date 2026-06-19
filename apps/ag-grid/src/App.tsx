@@ -214,6 +214,14 @@ export default function App() {
             show what would force an Enterprise upgrade.
           </p>
         </div>
+        <a
+          className="switch"
+          href="http://localhost:5174"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ↔ Compare SpreadJS (5174)
+        </a>
       </header>
 
       <div className="toolbar">

@@ -27,9 +27,33 @@ body {
   gap: 12px;
 }
 
+.app__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .app__header h1 {
   font-size: 20px;
   margin: 0 0 2px;
+}
+
+.switch {
+  flex: none;
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.switch:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .muted {
